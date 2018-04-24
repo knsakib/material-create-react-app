@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Typography from 'material-ui/Typography';
 
-class Hello extends React.Component {
+class ClassComponent extends React.Component {
   render() {
     return (
       <div>
@@ -15,7 +15,7 @@ class Hello extends React.Component {
             }
           }
 
-          export default App
+          export default App;
         `}</pre>
         </Typography>
       </div>
@@ -24,4 +24,4 @@ class Hello extends React.Component {
 }
 
 
-export default Hello;
+export default ClassComponent;

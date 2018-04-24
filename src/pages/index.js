@@ -8,8 +8,9 @@ import 'typeface-roboto';
 
 import ClassComponent from './ClassComponent';
 import FunctionalComponent from './FunctionalComponent';
-
-
+import Props from './Props';
+import State from './State';
+import LifeCycles from './LifeCycles';
 
 import List, { ListItem, ListItemIcon, ListItemText } from 'material-ui/List';
 import Dialog, {
@@ -25,6 +26,11 @@ import withRoot from '../withRoot';
 
 const MyLink = props => <Link to="/ClassComponent" {...props} />
 const MyLink2 = props => <Link to="/FunctionalComponent" {...props} />
+const MyLink3 = props => <Link to="/Props" {...props} />
+const MyLink4 = props => <Link to="/State" {...props} />
+const MyLink5 = props => <Link to="/LifeCycles" {...props} />
+
+
 
 
 const styles = theme => ({
@@ -79,6 +85,18 @@ class Index extends React.Component {
                     <ListItemText primary="Functinal Component" />
                   </ListItem>
 
+                  <ListItem button component={MyLink3}>
+                    <ListItemText primary="Props" />
+                  </ListItem>
+
+                  <ListItem button component={MyLink4}>
+                    <ListItemText primary="State" />
+                  </ListItem>
+
+                  <ListItem button component={MyLink5}>
+                    <ListItemText primary="LifeCycles" />
+                  </ListItem>
+
               </List>
               </Paper>
           </Grid>
@@ -93,7 +111,20 @@ class Index extends React.Component {
                         <Route path='/FunctionalComponent' exact component={FunctionalComponent} />
                   </Switch>
 
-              </Paper>
+                  <Switch>
+                        <Route path='/Props' exact component={Props} />
+                  </Switch>
+
+                  <Switch>
+                        <Route path='/State' exact component={State} />
+                  </Switch>
+
+                  <Switch>
+                        <Route path='/LifeCycles' exact component={LifeCycles} />
+                  </Switch>
+
+
+            </Paper>
           </Grid>
       </Grid>
       </div>
