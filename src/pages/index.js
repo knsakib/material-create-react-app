@@ -11,6 +11,8 @@ import FunctionalComponent from './FunctionalComponent';
 import Props from './Props';
 import State from './State';
 import LifeCycles from './LifeCycles';
+import LocalData from './LifeCycles';
+
 
 import List, { ListItem, ListItemIcon, ListItemText } from 'material-ui/List';
 import Dialog, {
@@ -29,6 +31,8 @@ const MyLink2 = props => <Link to="/FunctionalComponent" {...props} />
 const MyLink3 = props => <Link to="/Props" {...props} />
 const MyLink4 = props => <Link to="/State" {...props} />
 const MyLink5 = props => <Link to="/LifeCycles" {...props} />
+const MyLink6 = props => <Link to="/LocalData" {...props} />
+
 
 
 
@@ -97,6 +101,10 @@ class Index extends React.Component {
                     <ListItemText primary="LifeCycles" />
                   </ListItem>
 
+                  <ListItem button component={MyLink6}>
+                    <ListItemText primary="LocalData" />
+                  </ListItem>
+
               </List>
               </Paper>
           </Grid>
@@ -121,6 +129,10 @@ class Index extends React.Component {
 
                   <Switch>
                         <Route path='/LifeCycles' exact component={LifeCycles} />
+                  </Switch>
+
+                  <Switch>
+                        <Route path='/LocalData' exact component={LocalData} />
                   </Switch>
 
 
